@@ -7,14 +7,24 @@ Fork and clone this repo. On your fork, answer and commit the follow questions. 
 
 a. Given the variable `userNameOne` below, print *"The username is Test User"*.  Use *Optional Binding* (`if let`) to print the name.
 
-```swift
+````
 var userNameOne: String? = "Test User"
-```
+if let testUser = userNameOne {
+    print("The username is \(userNameOne!)")
+}
+````
+
 
 b. Given the variable `userNameTwo` below, print *"The username is undefined"*.  Use the *nil coalescing operator* (`??`).
 
 ```swift
+var userNameOne: String? = "Test User"
 var userNameTwo: String? = nil
+if let testUser = userNameTwo {
+    print("The username is \(userNameTwo ?? "undefined")")
+}   else {
+    print("The username is undefined")
+}
 ```
 
 ## Question 2
@@ -24,6 +34,10 @@ a. Given the variables `rectOneWidth` and `rectOneHeight` below, print "The area
 ```swift
 var rectOneWidth: Double? = 5
 var rectOneHeight: Double? = 10
+if let rectOneWidth = rectOneWidth, let rectOneHeight = rectOneHeight {
+      rectOneWidth * rectOneHeight
+
+}
 ```
 
 b. Given the variables `rectTwoWidth` and `rectTwoHeight` below, print "The are of rectTwo is not able to be calculated".  Use *Optional Binding* (`if let`) to print this message.
@@ -31,6 +45,11 @@ b. Given the variables `rectTwoWidth` and `rectTwoHeight` below, print "The are 
 ```swift
 var rectTwoWidth: Double? = nil
 var rectTwoHeight: Double? = nil
+if let rectTwoWidth = rectTwoWidth, let rectTwoHeight = rectTwoHeight {
+    print("The area of rectTWo is not to be calculated")
+}
+
+GO BACK TO THIS
 ```
 
 ## Question 3
@@ -42,7 +61,14 @@ a. Given the variables `userOneName`, `userOneAge`, and `userOneHeight` below, w
 var userOneName: String? = "Anne"
 var userOneAge: Int? = 15
 var userOneHeight: Double? = 70
+if let name = userOneName, let age = userOneAge, let height = userOneHeight {
+
+    print("Hello \(userOneName)! You are \(userOneAge) and \(userOneHeight/12)")
+}
+
+GO BACK TO THIS
 ```
+
 
 b. Given the variables `userTwoName`, `userTwoAge` and `userTwoHeight` below, write code that prints "Hello user!  You are 15 years old and I don't know how tall you are".  Use optional binding
 
@@ -61,6 +87,12 @@ Give the variable `favoriteNumber`, write code that either prints "Your favorite
 
 ```swift
 var favoriteNumber = Bool.random() ? Int.random(in: 0...10) : nil
+if let number = favoriteNumber {
+    let number = 
+    print("Your favorite number is \(number)")
+    } else {
+        print("I don't know what your favorite number is")
+}
 ```
 
 
