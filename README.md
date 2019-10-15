@@ -34,8 +34,8 @@ a. Given the variables `rectOneWidth` and `rectOneHeight` below, print "The area
 ```swift
 var rectOneWidth: Double? = 5
 var rectOneHeight: Double? = 10
-if let rectOneWidth = rectOneWidth, let rectOneHeight = rectOneHeight {
-      rectOneWidth * rectOneHeight
+if let width = rectOneWidth, let height = rectOneHeight {
+      print("The area of rectOne is \(width * height)")
 
 }
 ```
@@ -45,11 +45,12 @@ b. Given the variables `rectTwoWidth` and `rectTwoHeight` below, print "The are 
 ```swift
 var rectTwoWidth: Double? = nil
 var rectTwoHeight: Double? = nil
-if let rectTwoWidth = rectTwoWidth, let rectTwoHeight = rectTwoHeight {
-    print("The area of rectTWo is not to be calculated")
+if let width = rectTwoWidth, let height = rectTwoHeight {
+    print("The area of \(rectTwo) is not to be calculated")
 }
 
-GO BACK TO THIS
+GO BACK TO THIS - not sure what the question is really asking for
+
 ```
 
 ## Question 3
@@ -63,10 +64,8 @@ var userOneAge: Int? = 15
 var userOneHeight: Double? = 70
 if let name = userOneName, let age = userOneAge, let height = userOneHeight {
 
-    print("Hello \(userOneName)! You are \(userOneAge) and \(userOneHeight/12)")
+      print("Hello \(name)! You are \(age) and \(height/12) feet tall")
 }
-
-GO BACK TO THIS
 ```
 
 
@@ -76,6 +75,12 @@ b. Given the variables `userTwoName`, `userTwoAge` and `userTwoHeight` below, wr
 var userTwoName: String? = nil
 var userTwoAge: Int? = 15
 var userTwoHeight: Double? = nil
+// use if let to unwrap
+while let validUserTwoName = userTwoName, let validUserTwoAge = userTwoAge, let validUserTwoHeight: userTwoHeight {
+    print("You are \(validUserTwoAge) and I don't know how tall you are")
+    } else {
+    print("Values are unavailable")
+}
 ```
 
 
